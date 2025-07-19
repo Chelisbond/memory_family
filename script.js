@@ -30,7 +30,7 @@ function crearTablero() {
 function voltearCarta(carta) {
   if (carta.classList.contains('volteada') || cartasVolteadas.length === 2) return;
 
-  carta.innerHTML = <img src="images/${carta.dataset.valor}" alt="">;
+  carta.innerHTML = `<img src="images/${carta.dataset.valor}" alt="">`;
   carta.classList.add('volteada');
   cartasVolteadas.push(carta);
 
