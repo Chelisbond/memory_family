@@ -8,21 +8,24 @@ body {
 
 .tablero {
   display: grid;
-  grid-template-columns: repeat(6, 100px);
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit,
+  minmax(80px,1fr));
+  gap: 10px;
   justify-content: center;
   margin-top: 20px;
+  padding:10px;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .carta {
-  width: 80px;
-  height: 80px;
-  background-color: #ccc;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  width: 100%;
+  objet-fit:contain;
+  pointer-events:none;
+  background-color: white;
+  border: 1px solid #ccc;
   border-radius: 8px;
-overflow: hidden;
 }
 .carta img{
   width: 100%;
