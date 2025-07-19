@@ -1,4 +1,5 @@
 //@ts-nocheck
+const sonidoReinicio=new Audio('sound/Memory_Start.mp3');
 const imagenes = ['Cuy.png', 'Mamamoe.png', 'Kike.png', 'Picky.png', 'papapopo.png', 'mycopy.png', 'Kika.png'];
 let cartas = [];
 let cartasVolteadas = [];
