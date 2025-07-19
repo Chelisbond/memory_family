@@ -4,7 +4,7 @@ let cartas = [];
 let cartasVolteadas = [];
 let intentos = 0;
 
-const sonidoAcierto = new Audio('sounds/acierto.mp3');
+const sonidoAcierto = new Audio('sounds/Memory_Congrat.mp3');
 const tablero = document.getElementById('tablero');
 const intentosTexto = document.getElementById('intentos');
 
