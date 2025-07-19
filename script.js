@@ -1,4 +1,5 @@
 //@ts-nocheck
+const mensajeFinal=document.getElementById('mensajeFinal');
 const imagenes = [
   'Cuy.png', 'Mamamoe.png', 'Kike.png',
   'Picky.png', 'Papapopo.png', 'mycopy.png',
