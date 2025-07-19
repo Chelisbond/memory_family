@@ -25,13 +25,11 @@ h1 {
 }
 
 .carta {
-  width: 130px;
-  height: 130px;
+  width: 90px;
+  height: 90px;
   background-color: #fff;
   border: 2px solid #ccc;
-  border-radius: 40px;
-  display: flex;
-  align-items: center;
+  border-radius: 100%;
   justify-content: center;
   cursor: pointer;
   overflow: hidden;
