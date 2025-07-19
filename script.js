@@ -88,7 +88,7 @@ function reiniciarJuego() {
 
 function mostrarFelicitacion() {
 sonidoAcierto.pause();
-  sonidoAcierto.currentTime=();
+  sonidoAcierto.currentTime=0;
   felicitacion.style.display = 'block';
   sonidoFelicitacion.play();
 }
