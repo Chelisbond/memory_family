@@ -25,8 +25,8 @@ h1 {
 }
 
 .carta {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   background-color: #fff;
   border: 5px solid #ccc;
   border-radius: 100%;
@@ -42,6 +42,6 @@ h1 {
   border-radius: 10px;
 }
 .carta.volteada {
-  background-color: #fff;
+  background-color: blue;
   color: black;
 }
