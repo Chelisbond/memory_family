@@ -33,7 +33,7 @@ cartas.forEach((imagen, i) => {
 function voltearCarta(carta) {
   if (carta.classList.contains('volteada') || cartasVolteadas.length === 2) return;
 
-  carta.innerHTML = <img src="images/${carta.dataset.valor}" alt="Carta">;
+  carta.innerHTML = `<img src="images/${carta.dataset.valor}" alt="Carta">`;
   carta.classList.add('volteada');
   cartasVolteadas.push(carta);
 
