@@ -8,7 +8,7 @@ const imagenes = ['Cuy.png', 'Mamamoe.png', 'Kike.png', 'Picky.png', 'Papapopo.p
 let cartas = [...imagenes, ...imagenes];
 
 const sonidoAcierto = new Audio('sound/Memory_Congrat.mp3');
-const sonidoFelicitacion = new Audio('sound/felicidades.mp3');
+const sonidoFelicitacion = new Audio('sound/Felicidades.mp3');
 const sonidoReiniciar = new Audio('sound/Memory_Start.mp3');
 
 const tablero = document.getElementById('tablero');
