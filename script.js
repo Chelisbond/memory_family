@@ -56,3 +56,7 @@ function reiniciarJuego() {
 }
 
 reiniciarJuego(); // arranca el juego
+document.getElementById('reiniciar').addEventListener('click', () => {
+  sonidoReinicio.play();  // 🔊 Sonido de reinicio
+  reiniciarJuego();       // Tu función para reiniciar el memorama
+});
