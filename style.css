@@ -23,6 +23,7 @@ body {
   justify-content: center;
   cursor: pointer;
   overflow: hidden;
+  border-radius:10px;
 }
 
 .carta img {
