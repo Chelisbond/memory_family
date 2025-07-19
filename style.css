@@ -27,7 +27,7 @@ function voltearCarta(carta) {
 
   if (cartasVolteadas.length === 2) {
     intentos++;
-    intentosTexto.textContent = Intentos: ${intentos};
+    intentosTexto.textContent = `Intentos: ${intentos}`;
 
     const [c1, c2] = cartasVolteadas;
     if (c1.dataset.valor === c2.dataset.valor) {
