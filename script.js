@@ -54,3 +54,19 @@ function voltearCarta(carta) {
     }
   }
 }
+function reiniciarJuego() {
+  cartas = [...imagenes, ...imagenes].sort(() => 0.5 - Math.random());
+  cartasVolteadas = [];
+  intentos = 0;
+  intentosTexto.textContent = Intentos: ${intentos};
+  tablero.innerHTML = '';
+  cartas.forEach((imagen, i) => {
+    const carta = document.createElement('div');
+    carta.classList.add('carta');
+    carta.dataset.valor = imagen;
+    carta.dataset.index = i;
+    carta.innerHTML = '';
+    carta.addEventListener('click', () => voltearCarta(carta));
+    tablero.appendChild(carta);
+  });
+}
