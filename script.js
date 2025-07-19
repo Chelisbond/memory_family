@@ -34,7 +34,11 @@ function voltearCarta(carta) {
     const [c1, c2] = cartasVolteadas;
     if (c1.dataset.valor === c2.dataset.valor) {
       sonidoAcierto.play();
+c1.classList.add('emparjada');
+c2.classList.add('emparjada');
       cartasVolteadas = [];
+cartasVolteadas=[];
+verificarFinDelJuego();
     } else {
       setTimeout(() => {
         c1.innerHTML = '';
@@ -59,3 +63,13 @@ document.getElementById('reiniciar').addEventListener('click', () => {
   sonidoReinicio.play();  // 🔊 Sonido de reinicio
   reiniciarJuego();       // Tu función para reiniciar el memorama
 });
+
+unction verificarFinDelJuego() {
+  const cartasEmparejadas = document.querySelectorAll('.emparejada');
+  if (cartasEmparejadas.length === cartas.length) {
+    setTimeout(() => {
+      alert("🎉 ¡Felicidades! Has completado el juego en " + intentos + " intentos.");
+    }, 500);
+  }
+}
+
