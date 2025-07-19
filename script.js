@@ -27,18 +27,7 @@ function voltearCarta(carta) {
   carta.innerHTML = `<img src="images/${carta.dataset.valor}" alt="">`;
   carta.classList.add('volteada');
   cartasVolteadas.push(carta);
-function verificarFinDelJuego() {
-  const cartasTotales = document.querySelectorAll('.carta');
-  const cartasVolteadas = document.querySelectorAll('.carta.volteada');
 
-  if (cartasVolteadas.length === cartasTotales.length) {
-    setTimeout(() => {
-      alert("🎉 ¡Felicidades! Has completado el juego en " + intentos + " intentos.");
-      // También puedes reproducir un sonido de victoria si quieres
-      // sonidoVictoria.play();
-    }, 500);
-  }
-}
   if (cartasVolteadas.length === 2) {
     intentos++;
     intentosTexto.textContent = `Intentos: ${intentos}`;
