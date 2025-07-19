@@ -4,7 +4,7 @@ let intentos = 0;
 let parejasEncontradas = 0;
 const totalParejas = 7;
 
-const imagenes = ['Cuy.png', 'Mamamoe.png', 'Kike.png', 'Picky.png', 'papapopo.png', 'mycopy.png', 'Kika.png'];
+const imagenes = ['Cuy.png', 'Mamamoe.png', 'Kike.png', 'Picky.png', 'Papapopo.png', 'mycopy.png', 'Kika.png'];
 let cartas = [...imagenes, ...imagenes];
 
 const sonidoAcierto = new Audio('sound/Memory_Congrat.mp3');
