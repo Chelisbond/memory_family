@@ -8,10 +8,11 @@ body {
 
 .tablero {
   display: grid;
-  grid-template-columns: repeat(6, 100px);
-  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   justify-content: center;
-  margin-top: 20px;
+  max-width:300px;
+  margin: auto;
 
 }
 
