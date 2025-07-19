@@ -1,49 +1,52 @@
 //@ts-nocheck
-const mensajeFinal=document.getElementById('mensajeFinal');
-const imagenes = [
-  'Cuy.png', 'Mamamoe.png', 'Kike.png',
-  'Picky.png', 'Papapopo.png', 'mycopy.png',
-  'Nuevo.png' // Agrega más pares aquí si gustas
-];
-
-let cartas = [...imagenes, ...imagenes]; // Duplicamos para tener pares
+const imagenes = ['Cuy.png', 'Mamamoe.png', 'Kike.png', 'Picky.png', 'Papapopo.png', 'mycopy.png'];
+let cartas = [...imagenes, ...imagenes];
 let cartasVolteadas = [];
 let intentos = 0;
 
 const sonidoAcierto = new Audio('sounds/acierto.mp3');
 
-cartas = cartas.sort(() => 0.5 - Math.random());
-
 const tablero = document.getElementById('tablero');
 const intentosTexto = document.getElementById('intentos');
+const mensajeFinal = document.getElementById('mensajeFinal');
 
-// Limpia el tablero antes de crear
-tablero.innerHTML = '';
+function crearTablero() {
+  cartas = cartas.sort(() => 0.5 - Math.random());
+  tablero.innerHTML = '';
+  intentos = 0;
+  intentosTexto.textContent = 'Intentos: 0';
+  mensajeFinal.style.display = 'none';
 
-cartas.forEach((imagen, i) => {
-  const carta = document.createElement('div');
-  carta.classList.add('carta');
-  carta.dataset.valor = imagen;
-  carta.dataset.index = i;
-  carta.innerHTML = '';
-  carta.addEventListener('click', () => voltearCarta(carta));
-  tablero.appendChild(carta);
-});
+  cartas.forEach((imagen, i) => {
+    const carta = document.createElement('div');
+    carta.classList.add('carta');
+    carta.dataset.valor = imagen;
+    carta.dataset.index = i;
+    carta.addEventListener('click', () => voltearCarta(carta));
+    tablero.appendChild(carta);
+  });
+}
 
 function voltearCarta(carta) {
   if (carta.classList.contains('volteada') || cartasVolteadas.length === 2) return;
 
-  carta.innerHTML = `<img src="images/${carta.dataset.valor}" alt="Carta">`;
+  carta.innerHTML = <img src="images/${carta.dataset.valor}" alt="">;
   carta.classList.add('volteada');
   cartasVolteadas.push(carta);
 
   if (cartasVolteadas.length === 2) {
     intentos++;
     intentosTexto.textContent = Intentos: ${intentos};
+
     const [c1, c2] = cartasVolteadas;
     if (c1.dataset.valor === c2.dataset.valor) {
       sonidoAcierto.play();
       cartasVolteadas = [];
+
+      const totalVolteadas = document.querySelectorAll('.carta.volteada').length;
+      if (totalVolteadas === cartas.length) {
+        mensajeFinal.style.display = 'block';
+      }
     } else {
       setTimeout(() => {
         c1.innerHTML = '';
@@ -55,19 +58,9 @@ function voltearCarta(carta) {
     }
   }
 }
+
 function reiniciarJuego() {
-  cartas = [...imagenes, ...imagenes].sort(() => 0.5 - Math.random());
-  cartasVolteadas = [];
-  intentos = 0;
-  intentosTexto.textContent = Intentos: ${intentos};
-  tablero.innerHTML = '';
-  cartas.forEach((imagen, i) => {
-    const carta = document.createElement('div');
-    carta.classList.add('carta');
-    carta.dataset.valor = imagen;
-    carta.dataset.index = i;
-    carta.innerHTML = '';
-    carta.addEventListener('click', () => voltearCarta(carta));
-    tablero.appendChild(carta);
-  });
+  crearTablero();
 }
+
+crearTablero();
