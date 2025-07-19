@@ -40,6 +40,6 @@ function voltearCarta(carta) {
         c2.classList.remove('volteada');
         cartasVolteadas = [];
       }, 1000);
-    }
-  }
+    }
+  }
 }
