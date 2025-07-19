@@ -19,14 +19,14 @@ h1 {
 .tablero {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  gap: 6px;
+  gap: 10px;
   justify-content: center;
   max-width:300px;
 }
 
 .carta {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 10px;
