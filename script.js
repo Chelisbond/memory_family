@@ -1,5 +1,5 @@
 //@ts-nocheck
-const imagenes = ['Cuy.png', 'Mamamoe.png', 'Kike.png', 'Picky.png', 'Papapopo.png', 'mycopy.png'];
+const imagenes = ['Cuy.png', 'Mamamoe.png', 'Kike.png', 'Picky.png', 'papapopo.png', 'mycopy.png', 'Kika.png'];
 let cartas = [];
 let cartasVolteadas = [];
 let intentos = 0;
